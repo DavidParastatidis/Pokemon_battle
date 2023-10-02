@@ -1,0 +1,28 @@
+version: '3'
+services:
+  flask-app:
+    build:
+      context: ./pokemon_app  # The path to your Flask application code
+    container_name: pokemon_app
+    ports:
+      - "5000:5000"  # Map the Flask app's port to the host
+    depends_on:
+      - mysql-db  # Ensure the Flask app starts after the MySQL container
+    environment:
+      - MYSQL_HOST=mysql_db
+      - MYSQL_USER=battle_user
+      - MYSQL_PASSWORD=battle_password
+      - MYSQL_DB=battle_db
+
+  mysql-db:
+    image: mysql:5.7
+    container_name: mysql_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_USER=battle_user
+      - MYSQL_PASSWORD=battle_password
+      - MYSQL_DATABASE=battle_db
+    ports:
+      - "3306:3306"  # Map the MySQL port to the host
+    volumes:
+      - ./db_init.sql:/docker-entrypoint-initdb.d/init.sql
