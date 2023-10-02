@@ -5,7 +5,7 @@ If no Pokemon hp has reached 0 then the Pokemon with the highest remaining hp wi
 
 ## Technologies used:
   - Requests to [PokeAPI](https://pokeapi.co/) to gather information for each Pokemon
-  - Cache memory to store each Pokemon' info so the application will not make unnecessary API calls
+  - Cache memory to store each Pokemon's info so the application will not make unnecessary API calls for the same Pokemons
   - Flask to set up a local server which allows the user to communicate with the application via routing
   - MySQL database to store the battle logs
   - Docker for dockerization of the MySQL database and main Python application in seperate containers
