@@ -31,7 +31,7 @@ If no Pokemon hp has reached 0 then the Pokemon with the highest remaining hp wi
 
   #### Show previous battle logs from database
 
-    http://localhost:5000/[get_previous_battles](http://localhost:5000/show_previous_battles)
+    http://localhost:5000/show_previous_battles
 
   This returns all previous winners and battle logs that where stored in the database. Note that after shutting the db container all entries are deleted
 
