@@ -21,7 +21,7 @@ If no Pokemon hp has reached 0 then the Pokemon with the highest remaining hp wi
   ```
   This will use the docker-compose.yml file and take instruction to set up a container battle_app main application and the MySQL database.
   When you see that both pokemon_app and mysql_db containers are running you can open a browser window and access them with the following URLs:
-  #### Make Pokemon battle
+  #### Make two Pokemon battle
   
     http://localhost:5000/battle?pokemon1=<pokemon_name_1>&pokemon2=<pokemon_name_2> 
     
