@@ -19,13 +19,13 @@ If no Pokemon hp has reached 0 then the Pokemon with the highest remaining hp wi
   ```shell
   docker-compose up
   ```
-  This will use the docker-compose.yml file and take instruction to set up a container battle_app main application and the MySQL database
+  This will use the docker-compose.yml file and take instruction to set up a container battle_app main application and the MySQL database.
   When you see that both pokemon_app and mysql_db containers are running you can open a browser window and access them with the following URLs:
   #### Make Pokemon battle
   
     http://localhost:5000/battle?pokemon1=<pokemon_name_1>&pokemon2=<pokemon_name_2> 
     
-  Where pokemon_name_1 is the name of the first pokemon and pokemon_name_2 is the name of the second pokemon
+  Where <pokemon_name_1> is the name of the first pokemon and <pokemon_name_2> is the name of the second pokemon
   After entering the URL, a json response should appear displaying the winner, the battle log with each attack and both Pokemon IDs containing
   their name, stats and types
 
