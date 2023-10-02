@@ -33,11 +33,11 @@ If no Pokemon hp has reached 0 then the Pokemon with the highest remaining hp wi
 
     http://localhost:5000/[get_previous_battles](http://localhost:5000/show_previous_battles)
 
-  This returns all the previous winners and battle logs. Note that after shutting the db container all entries are deleted
+  This returns all previous winners and battle logs that where stored in the database. Note that after shutting the db container all entries are deleted
 
   To shut down the containers use the command:
 
     docker-compose down
 
-  This will only delete the deocker containers. If you want to delete the volumes as well use the '-v' argument
+  This will only delete the deocker containers. If you want to delete the volumes as well use the '-v' argument.
   To delete the docker images use the '--rmi all' argument
